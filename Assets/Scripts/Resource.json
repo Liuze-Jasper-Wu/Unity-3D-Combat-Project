@@ -1,0 +1,243 @@
+{
+    "Monsters": {
+        "Dunny": {
+            "Name" : "Dunny",
+            "World" : 1,
+            "Island" : 1,
+            "MonsterNum" : 0,
+            "IsBoss" : false,
+            "Health" : "Infinite",
+            "Attack" : 0,
+            "Materials" : {},
+            "HaveSkill": false,
+            "Skills": {},
+            "HaveSword": false,
+            "Swords": {},
+            "HaveShield": false,
+            "Sheilds" : {},
+            "HaveBow" : false,
+            "Bows": {},
+            "HaveGuns": false,
+            "Guns": {},
+            "HaveArmour": false,
+            "Armours": {}
+        },
+        "Betrayer": {
+            "Name" : "Betrayer",
+            "World" : 1,
+            "Island" : 1,
+            "MonsterNum" : 1,
+            "IsBoss" : false,
+            "Health" : 25,
+            "Attack" : 4,
+            "Materials" : {
+                "Celestium" : {
+                    "Min" : 1,
+                    "Max" : 5
+                }
+            },
+            "HaveSkill": false,
+            "Skills": {},
+            "HaveSword": false,
+            "Swords": {
+                "Combat": {
+                    "Range": 3
+                }
+            },
+            "HaveShield": false,
+            "Sheilds" : {},
+            "HaveBow" : false,
+            "Bows": {},
+            "HaveGuns": false,
+            "Guns": {},
+            "HaveArmour": false,
+            "Armours": {}
+        }
+    },
+    "Swords": {
+        "Cutlass" : {
+            "Name" : "Cutlass",
+            "Damage" : 10,
+            "Range" : 5,
+            "HaveAbility" : false,
+            "Abilities" : {},
+            "Materials" : {
+                "Celestium" : 8
+            },
+            "Money" : {
+                "Copper" : 80,
+                "Silver" : 0,
+                "Gold" : 0,
+                "Luner" : 0
+            },
+            "Upgrades" : {
+                "MaterialsAdd" : 0.4,
+                "Stats" : 6
+            },
+            "Category" : "Common",
+            "Percent" : "10"
+        }
+    },
+    "Sheilds" : {
+        "Kornis" : {
+            "Name" : "Zaroth",
+            "Defence" : 5,
+            "Hp" : 20,
+            "HaveAbility" : false,
+            "Abilities" : {},
+            "Materials" : {
+                "Kornash" : 7
+            },
+            "Money" : {
+                "Copper" : 85,
+                "Silver" : 0,
+                "Gold" : 0,
+                "Luner" : 0
+            },
+            "Upgrades" : {
+                "MaterialsAdd" : 0.2,
+                "Stats" : 6
+            },
+            "Category" : "Common",
+            "Percent" : "10"
+        }
+    },
+    "Bows" : {
+        "Zalnor" : {
+            "Name" : "Zalnor",
+            "Range" : 10,
+            "HaveAbility" : false,
+            "Abilities" : {},
+            "Materials" : {
+                "Zalcryst" : 11
+            },
+            "Money" : {
+                "Copper" : 115,
+                "Silver" : 0,
+                "Gold" : 0,
+                "Luner" : 0
+            },
+            "Upgrades" : {
+                "MaterialsAdd" : 1.2,
+                "Stats" : 6
+            },
+            "Category" : "Common",
+            "Percent" : "10",
+            "Ammo" : "Falyn",
+            "ShootCD" : 3
+        }
+    },
+    "Arrow" : {
+        "Falyn" : {
+            "Name" : "Falyn",
+            "Categories" : {
+                "Common" : {
+                    "Damage": 10,
+                    "Special": {},
+                    "Money": {
+                        "Copper": 50,
+                        "Silver": 0,
+                        "Gold": 0,
+                        "Luner": 0
+                    }
+                }
+            }
+        }
+    },
+    "Guns" : {
+        "Flintlock" : {
+            "Name" : "Flintlock",
+            "Range" : 15,
+            "HaveAbility" : false,
+            "Abilities" : {},
+            "Materials" : {
+                "Korvium" : 15
+            },
+            "Money" : {
+                "Copper" : 150,
+                "Silver" : 0,
+                "Gold" : 0,
+                "Luner" : 0
+            },
+            "Upgrades" : {
+                "MaterialsAdd" : 1.6,
+                "Stats" : 6
+            },
+            "Category" : "Common",
+            "Percent" : "10",
+            "Ammo" : "Falyn",
+            "ShootCD" : 1
+        }
+    },
+    "Ammo" : {
+        "Falyn" : {
+            "Name" : "Falyn",
+            "Categories" : {
+                "Common" : {
+                    "Damage": 20,
+                    "Special": {},
+                    "Money": {
+                        "Copper": 50,
+                        "Silver": 0,
+                        "Gold": 0,
+                        "Luner": 0
+                    }
+                }
+            }
+        }
+    },
+    "Armours" : {
+        "Zyphor" : {
+            "Name" : "Zalnor",
+            "Abilities" : {
+                "Super smash" : {
+                    "Damage" : 0.5,
+                    "Defence" : 0,
+                    "IsGun" : false,
+                    "GunCD" : 0,
+                    "GunContinue" : 0,
+                    "CD" : 10
+                },
+                "Explosion shoot" : {
+                    "Damage" : 1.0,
+                    "Defence" : 0,
+                    "IsGun" : false,
+                    "GunCD" : 0,
+                    "GunContinue" : 0,
+                    "CD" : 15
+                },
+                "Upgrade defence" : {
+                    "Damage" : 0,
+                    "Defence" : 0.5,
+                    "IsGun" : false,
+                    "GunCD" : 0,
+                    "GunContinue" : 0,
+                    "CD" : 25
+                },
+                "Duel p1911" : {
+                    "Damage" : 0.7,
+                    "Defence" : 0,
+                    "IsGun" : true,
+                    "GunCD" : 0.5,
+                    "GunContinue" : 5,
+                    "CD" : 30
+                }
+            },
+            "Materials" : {
+                "Zyphite Weave" : 20
+            },
+            "Money" : {
+                "Copper" : 250,
+                "Silver" : 0,
+                "Gold" : 0,
+                "Luner" : 0
+            },
+            "Upgrades" : {
+                "MaterialsAdd" : 2.0,
+                "Stats" : 6
+            },
+            "Category" : "Common",
+            "Percent" : "10"
+        }
+    }
+}
