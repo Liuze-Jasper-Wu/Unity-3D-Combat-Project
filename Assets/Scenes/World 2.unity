@@ -32057,6 +32057,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1289018263931107430, guid: 26ef2fc1c8d294be3bbf26d27fd5539c,
         type: 3}
+      propertyPath: m_NeverAutoSwitchControlSchemes
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1289018263931107430, guid: 26ef2fc1c8d294be3bbf26d27fd5539c,
+        type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_ActionId
       value: 8d105927-8e74-466f-8a24-7393ef474f6d
       objectReference: {fileID: 0}
@@ -36244,6 +36249,39 @@ MonoBehaviour:
   weapon: {fileID: 956737043}
   weaponSheath: {fileID: 804804299}
   animator: {fileID: 1130529956}
+--- !u!114 &1130529963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130529949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de20ea42ab571ab4f95b978ec7d789ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawWeaponAction:
+    m_Name: Draw Weapon
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: afa352f9-0c22-4a73-ba6c-36593d6b03ab
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  attackAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 9079b4ff-dcc6-48ab-9019-f00cbe116fe3
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  anim: {fileID: 1130529956}
+  _isWeaponDrawn: 0
+  _isAttacking: 0
 --- !u!1001 &1133624444
 PrefabInstance:
   m_ObjectHideFlags: 0
