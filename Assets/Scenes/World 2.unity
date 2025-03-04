@@ -23635,9 +23635,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 761112958}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 094a1099a745bf54a8d61fccaf749fee, type: 3}
+  m_Script: {fileID: 11500000, guid: 139cde5de306d45f5b260844938376df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackAnimator: {fileID: 0}
+  deathAnimator: {fileID: 0}
 --- !u!1 &763726971 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1229173742811901291, guid: 42fabae8a0b084a0eb2628a7d418001f,
@@ -29393,10 +29395,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 956737043}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eed30a8f23ae7fc4588ab77ee690c4f9, type: 3}
+  m_Script: {fileID: 11500000, guid: c9079e1ddee6fbe47ab3e3aeb3dd2e9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 10
+  _anim: {fileID: 0}
 --- !u!1001 &956844148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36381,8 +36384,6 @@ MonoBehaviour:
     m_Flags: 0
   anim: {fileID: 1130529956}
   weapon: {fileID: 956737043}
-  _isWeaponDrawn: 0
-  _isAttacking: 0
   _attackingNum: 0
 --- !u!114 &1130529969
 MonoBehaviour:

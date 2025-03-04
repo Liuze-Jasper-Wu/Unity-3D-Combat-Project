@@ -219,7 +219,7 @@ namespace StarterAssets
         private void Move()
         {
 
-            if (!_weaponController._isWeaponDrawn)
+            if (!_animator.GetBool("IsDrawWeapon"))
             {
                 // set/target speed based on move speed, sprint speed and if sprint is pressed
                 float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;

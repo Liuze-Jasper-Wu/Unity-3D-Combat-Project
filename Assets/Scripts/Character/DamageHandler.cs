@@ -6,20 +6,15 @@ namespace Damage
     public class DamageHandler : MonoBehaviour
     {
         public float _damage = 10;
+        public Animator _anim;
 
-        private bool _isDamaging;
-        private WeaponController weaponController;
-
-        private void Start()
-        {
-            _isDamaging = false;
-            weaponController = FindObjectOfType<WeaponController>();
-        }
+        //private variables
+        private bool _hasAlreadyTakenDamage = false;
 
         private void OnTriggerEnter(Collider other)
         {
             Debug.Log("Trigger weapon entered");
-            if (other.CompareTag("Enemy") && !weaponController._isWeaponDrawn)
+            if (other.CompareTag("Enemy") && !_anim.GetBool("IsAttacking") && !_hasAlreadyTakenDamage)
             {
                 StartCoroutine(DealDamage());
             }
@@ -28,9 +23,9 @@ namespace Damage
         private IEnumerator DealDamage()
         {
             Debug.Log("Starting deal damage");
-            _isDamaging = true;
-            yield return new WaitForSeconds(1f);
-            _isDamaging = false;
+            _anim.SetBool("IsAttacking", true);
+            yield return new WaitForSeconds(_anim.GetCurrentAnimatorStateInfo(0).length);
+            _anim.SetBool("IsAttacking", false);
         }
     }
 }
