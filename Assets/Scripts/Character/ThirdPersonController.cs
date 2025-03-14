@@ -282,7 +282,7 @@ namespace StarterAssets
                 // update animator if using character
                 if (_hasAnimator)
                 {
-                    Debug.Log("animation Blend(Combat, speed): " + _animationBlend);
+                    // Debug.Log("animation Blend(Combat, speed): " + _animationBlend);
                     _animator.SetFloat(_animIDSpeed, _animationBlend);
                     _animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
                 }

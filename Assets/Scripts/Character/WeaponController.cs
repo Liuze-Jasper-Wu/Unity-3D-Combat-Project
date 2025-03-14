@@ -67,23 +67,27 @@ public class WeaponController : MonoBehaviour
     // Method to be called when the weapon is drawn
     private void OnAttack()
     {
-        if (anim.GetBool("IsDrawWeapon"))
+        if (!anim.GetBool("IsAttacking"))
         {
-            if (_attackingNum == 0)
+            Debug.Log("attack");
+            if (anim.GetBool("IsDrawWeapon"))
             {
-                // Add weapon draw logic (e.g., animation, enable weapon)
-                anim.SetTrigger("Attack");
-                anim.SetBool("IsAttacking", true);
-                _attackingNum = 1;
-            }
-            else if (_attackingNum == 1)
-            {
-                // Trigger weapon drawing logic
-                Debug.Log("Weapon Drawn");
+                if (_attackingNum == 0)
+                {
+                    // Add weapon draw logic (e.g., animation, enable weapon)
+                    anim.SetTrigger("Attack");
+                    anim.SetBool("IsAttacking", true);
+                    _attackingNum = 1;
+                }
+                else if (_attackingNum == 1)
+                {
+                    // Trigger weapon drawing logi
 
-                // Add weapon draw logic (e.g., animation, enable weapon)
-                anim.SetTrigger("SecondAttack");
-                _attackingNum = 0;
+                    // Add weapon draw logic (e.g., animation, enable weapon)
+                    anim.SetTrigger("SecondAttack");
+                    anim.SetBool("IsAttacking", true);
+                    _attackingNum = 0;
+                }
             }
         }
     }

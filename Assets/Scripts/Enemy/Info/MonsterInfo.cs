@@ -45,7 +45,7 @@ namespace MonsterInfoNS
         void Start()
         {
             MonsterAnim = GetComponent<Animator>();
-            gameObject.name = "Dunny";
+            // gameObject.name = "Dunny";
             // Initialize after GameObject is ready
             ResetMonster();
 
@@ -93,15 +93,7 @@ namespace MonsterInfoNS
             }
         }
 
-        private void Update()
-        {
-            if (anim != null && anim.GetBool("IsAttacking"))
-            {
-                TakeDamage(DamageHandler._damage);
-            }
-        }
-
-        private void TakeDamage(float damage)
+        public void TakeDamage(float damage)
         {
             currentHealth -= damage;
             if (currentHealth <= 0)

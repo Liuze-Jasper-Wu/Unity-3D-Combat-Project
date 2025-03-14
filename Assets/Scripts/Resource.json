@@ -1,6 +1,5 @@
 {
-    "Monsters": {
-        "Dunny": {
+    "Monsters": [{
             "Name" : "Dunny",
             "World" : 1,
             "Island" : 1,
@@ -20,9 +19,16 @@
             "HaveGuns": false,
             "Guns": {},
             "HaveArmour": false,
-            "Armours": {}
-        },
-        "Betrayer": {
+            "Armours": {},
+            "SpawnPoints": [
+                {
+                    "Position": [-25, 17.5, -51],
+                    "Rotation": [0, 100, 0]
+                }
+            ],
+            "SpawnCD": 0
+    },
+    {
             "Name" : "Betrayer",
             "World" : 1,
             "Island" : 1,
@@ -52,8 +58,9 @@
             "Guns": {},
             "HaveArmour": false,
             "Armours": {}
-        }
-    },
+        
+}
+],
     "Swords": {
         "Cutlass" : {
             "Name" : "Cutlass",

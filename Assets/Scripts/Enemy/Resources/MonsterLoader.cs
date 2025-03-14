@@ -12,6 +12,8 @@ namespace Loader
     {
         private static MonsterData monsterData;
         private static bool ismonsterDataLoaded = false;
+        
+        public TextAsset Resource;
 
         void Start()
         {
@@ -19,7 +21,7 @@ namespace Loader
             Monster monster = FindMonsterByName("Dunny");
         }
 
-        private IEnumerator InitializeMonsterLoader()
+        public IEnumerator InitializeMonsterLoader()
         {
             yield return StartCoroutine(LoadJsonFromStreamingAssets());
 
@@ -33,6 +35,7 @@ namespace Loader
         private IEnumerator LoadJsonFromStreamingAssets()
         {
             string path = Path.Combine(Application.streamingAssetsPath, "Resource.json");
+                Debug.Log($"Successfully loaded path: {path}");
 
             if (!File.Exists(path))
             {
@@ -48,7 +51,11 @@ namespace Loader
                 yield break;
             }
 
+                Debug.Log($"Successfully loaded: {jsonText}");
+
+
             monsterData = JsonConvert.DeserializeObject<MonsterData>(jsonText);
+
 
             if (monsterData == null || monsterData.Monsters == null || monsterData.Monsters.Length == 0)
             {
@@ -57,6 +64,7 @@ namespace Loader
             else
             {
                 Debug.Log($"Successfully loaded {monsterData.Monsters.Length} monsters.");
+                Debug.Log($"Successfully loaded MonsterNum {monsterData.Monsters[0].MonsterNum} ");
                 ismonsterDataLoaded = true;
             }
         }

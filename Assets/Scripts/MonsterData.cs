@@ -9,12 +9,12 @@ namespace GameGT
     public class MonsterData
     {
         public Monster[] Monsters;
-        public Sword[] Swords;
-        public Shield[] Sheilds;
-        public Bow[] Bows;
-        public Ammo[] Ammo;
-        public Gun[] Guns;
-        public Armour[] Armours;
+        // public Sword[] Swords;
+        // public Shield[] Sheilds;
+        // public Bow[] Bows;
+        // public Ammo[] Ammo;
+        // public Gun[] Guns;
+        // public Armour[] Armours;
     }
 
     [System.Serializable]
@@ -41,8 +41,16 @@ namespace GameGT
         public bool HaveArmour;
         public Dictionary<string, Armour> Armours;
         public float Speed;
+        public SpawnPoint[] SpawnPoints;
+
     }
 
+    [System.Serializable]
+    public class SpawnPoint
+    {
+        public List<float> Position;
+        public List<float> Rotation;
+    }
 
     [System.Serializable]
     public class Sword

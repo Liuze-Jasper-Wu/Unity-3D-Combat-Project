@@ -4,10 +4,10 @@
             "Name": "Dunny",
             "World": 1,
             "Island": 1,
-            "MonsterNum": 0,
+            "MonsterNum": 1000,
             "IsBoss": false,
             "Health": "Infinite",
-            "Attack": 0,
+            "Attack": 99,
             "Materials": {},
             "HaveSkill": false,
             "Skills": {},
@@ -20,7 +20,22 @@
             "HaveGuns": false,
             "Guns": {},
             "HaveArmour": false,
-            "Armours": {}
+            "Armours": {},
+            "SpawnPoints": [
+                {
+                    "Position": [
+                        -25,
+                        17.5,
+                        -51
+                    ],
+                    "Rotation": [
+                        0,
+                        100,
+                        0
+                    ]
+                }
+            ],
+            "SpawnCD": 0
         },
         {
             "Name": "Betrayer",
@@ -51,11 +66,26 @@
             "HaveGuns": false,
             "Guns": {},
             "HaveArmour": false,
-            "Armours": {}
+            "Armours": {},
+            "SpawnPoints": [
+                {
+                    "Position": [
+                        -25,
+                        17.5,
+                        -51
+                    ],
+                    "Rotation": [
+                        0,
+                        100,
+                        0
+                    ]
+                }
+            ],
+            "SpawnCD": 0
         }
     ],
-    "Swords": [
-        {
+    "Swords": {
+        "Cutlass": {
             "Name": "Cutlass",
             "Damage": 10,
             "Range": 5,
@@ -77,9 +107,9 @@
             "Category": "Common",
             "Percent": "10"
         }
-    ],
-    "Shields": [
-        {
+    },
+    "Sheilds": {
+        "Kornis": {
             "Name": "Zaroth",
             "Defence": 5,
             "Hp": 20,
@@ -101,9 +131,9 @@
             "Category": "Common",
             "Percent": "10"
         }
-    ],
-    "Bows": [
-        {
+    },
+    "Bows": {
+        "Zalnor": {
             "Name": "Zalnor",
             "Range": 10,
             "HaveAbility": false,
@@ -126,9 +156,9 @@
             "Ammo": "Falyn",
             "ShootCD": 3
         }
-    ],
-    "Arrow": [
-        {
+    },
+    "Arrow": {
+        "Falyn": {
             "Name": "Falyn",
             "Categories": {
                 "Common": {
@@ -143,9 +173,9 @@
                 }
             }
         }
-    ],
-    "Guns": [
-        {
+    },
+    "Guns": {
+        "Flintlock": {
             "Name": "Flintlock",
             "Range": 15,
             "HaveAbility": false,
@@ -168,9 +198,9 @@
             "Ammo": "Falyn",
             "ShootCD": 1
         }
-    ],
-    "Ammo": [
-        {
+    },
+    "Ammo": {
+        "Falyn": {
             "Name": "Falyn",
             "Categories": {
                 "Common": {
@@ -185,9 +215,9 @@
                 }
             }
         }
-    ],
-    "Armours": [
-        {
+    },
+    "Armours": {
+        "Zyphor": {
             "Name": "Zalnor",
             "Abilities": {
                 "Super smash": {
@@ -239,5 +269,5 @@
             "Category": "Common",
             "Percent": "10"
         }
-    ]
+    }
 }

@@ -1,1 +1,0 @@
-An project using unity, now making the combat system, welcome to share ideas about this project and our game, teh assets are open for everybody and can check the main script, you can use directly by draging it into your unity project asset

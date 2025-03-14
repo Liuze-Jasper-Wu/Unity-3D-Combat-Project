@@ -23604,15 +23604,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 761112958}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0.76604444, z: 0, w: 0.64278764}
+  m_LocalPosition: {x: -25, y: 0, z: -51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1317906207}
   m_Father: {fileID: 0}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 100, z: 0}
 --- !u!65 &761112962
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29406,6 +29406,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _anim: {fileID: 1130529956}
+  detectionRadius: 0.3
+  sphereOffset: {x: 0, y: 1.2, z: 0}
 --- !u!1001 &956844148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32144,6 +32146,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1289018263931107425, guid: 26ef2fc1c8d294be3bbf26d27fd5539c,
+        type: 3}
+      propertyPath: SprintSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1289018263931107430, guid: 26ef2fc1c8d294be3bbf26d27fd5539c,
         type: 3}
       propertyPath: m_Camera
@@ -36416,6 +36423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 758a3c292284648b886c43e7e8400fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Resource: {fileID: 4900000, guid: a9003c481652147d8a194da379669d39, type: 3}
 --- !u!1001 &1133624444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66048,6 +66056,67 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 3166200003208906893, guid: f1fc5bb90ac285e4486771552d63bcb8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f1fc5bb90ac285e4486771552d63bcb8, type: 3}
+--- !u!1 &2000069530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2000069533}
+  - component: {fileID: 2000069532}
+  - component: {fileID: 2000069531}
+  m_Layer: 0
+  m_Name: DunnySpawnArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2000069531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000069530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 487b10bec15a34bdab4702f6341739ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterLoader: {fileID: 1130529971}
+  monsterName: Dunny
+  monsterPrefab: {fileID: 761112958}
+--- !u!65 &2000069532
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000069530}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20, y: 3, z: 20}
+  m_Center: {x: 0, y: 1.5, z: 0}
+--- !u!4 &2000069533
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000069530}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -25, y: 18, z: -51}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2002412322 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1616632298213091675, guid: 42fabae8a0b084a0eb2628a7d418001f,
