@@ -23595,6 +23595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8826a9de61d1547aa9b711c77ce6c2ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerInfo: {fileID: 1130529972}
   anim: {fileID: 1130529956}
   MonsterAnim: {fileID: 761112963}
 --- !u!4 &761112961
@@ -33734,6 +33735,67 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2799740716385147855, guid: 299e7a1cb6456cf4fa6079cf5978df9b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 299e7a1cb6456cf4fa6079cf5978df9b, type: 3}
+--- !u!1 &1068339308
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1068339311}
+  - component: {fileID: 1068339310}
+  - component: {fileID: 1068339309}
+  m_Layer: 0
+  m_Name: BetrayerSpawnArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1068339309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068339308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51a82de2476ee41f5ab810bc911ae774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterLoader: {fileID: 1130529971}
+  monsterName: Betrayer
+  monsterPrefab: {fileID: 761112958}
+--- !u!65 &1068339310
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068339308}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 40, y: 3, z: 40}
+  m_Center: {x: 0, y: 1.5, z: 0}
+--- !u!4 &1068339311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068339308}
+  m_LocalRotation: {x: 0, y: 0.186524, z: 0, w: 0.9824504}
+  m_LocalPosition: {x: -40.5, y: 18, z: 21.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 21.5, z: 0}
 --- !u!1001 &1069343421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36424,6 +36486,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resource: {fileID: 4900000, guid: a9003c481652147d8a194da379669d39, type: 3}
+--- !u!114 &1130529972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130529949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f03a691575fb4a81b340c4158594ec1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterLoader: {fileID: 1130529971}
+  maxHealth: 100
+  currentHealth: 100
+  sword: Combat
+  sheild: 
+  gun: 
+  armor: 
+  bow: 
+  bronze: 5
+  silver: 0
+  gold: 0
+  level: 1
+  exp: 0
+  levelExp: 50
+  stats: 0
+  anim: {fileID: 1130529956}
 --- !u!1001 &1133624444
 PrefabInstance:
   m_ObjectHideFlags: 0

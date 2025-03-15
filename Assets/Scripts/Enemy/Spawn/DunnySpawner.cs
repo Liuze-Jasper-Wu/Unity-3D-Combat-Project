@@ -98,7 +98,7 @@ public class DunnySpawner : MonoBehaviour
             if (monsterManager != null)
             {
                 // Now call CreateMonster on the instance
-                monsterManager.CreateMonster(monsterPrefab, position, rotation);
+                monsterManager.CreateMonster(monsterPrefab, "Dunny", position, rotation);
                 Debug.Log($"Spawned {monsterData.Name} at {position}");
             }
             else

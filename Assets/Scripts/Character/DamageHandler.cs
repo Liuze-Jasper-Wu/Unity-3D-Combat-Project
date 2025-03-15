@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using MonsterInfo = MonsterInfoNS.MonsterInfo;
+using BetrayerSpawner = Spawn.BetrayerSpawner;
 
 namespace Damage
 {
@@ -36,9 +37,9 @@ namespace Damage
 
             Debug.Log("time length: " + _anim.GetCurrentAnimatorStateInfo(0).length);
             // Wait for the animation to finish and reset for the next attack
-            yield return new WaitForSeconds(_anim.GetCurrentAnimatorStateInfo(0).length);
+            yield return new WaitForSeconds(1f);
             _anim.SetBool("IsAttacking", false);
-
+            Debug.Log("can deal damage");
             canDealDamage = true; // Allow new attacks
         }
 
@@ -55,7 +56,16 @@ namespace Damage
                     if (monster != null)
                     {
                         monster.TakeDamage(_damage);
-                        // Debug.Log($"Dealt {_damage} damage to {monster.Name}");
+                        if (monster.IsDead)
+                        {
+                            if (monster.Name == "Betrayer(Clone)")
+                            {
+                                Debug.Log("Betrayer spawned");
+                                BetrayerSpawner betrayerSpawner = FindObjectOfType<BetrayerSpawner>();
+                                StartCoroutine(betrayerSpawner.RespawnMonster(monster.position, monster.rotation));
+                            }
+                        }
+                        Debug.Log($"Dealt {_damage} damage to {monster.Name}");
                     }
                 }
             }

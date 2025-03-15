@@ -4,10 +4,10 @@
             "Name": "Dunny",
             "World": 1,
             "Island": 1,
-            "MonsterNum": 1000,
+            "MonsterNum": 0,
             "IsBoss": false,
             "Health": "Infinite",
-            "Attack": 99,
+            "Attack": 0,
             "Materials": {},
             "HaveSkill": false,
             "Skills": {},
@@ -35,7 +35,8 @@
                     ]
                 }
             ],
-            "SpawnCD": 0
+            "SpawnCD": 0,
+            "exp": 0
         },
         {
             "Name": "Betrayer",
@@ -70,44 +71,83 @@
             "SpawnPoints": [
                 {
                     "Position": [
-                        -25,
+                        -40.5,
                         17.5,
-                        -51
+                        12.5
                     ],
                     "Rotation": [
                         0,
-                        100,
+                        140,
+                        0
+                    ]
+                },
+                {
+                    "Position": [
+                        -53,
+                        17.5,
+                        12.5
+                    ],
+                    "Rotation": [
+                        0,
+                        140,
+                        0
+                    ]
+                },
+                {
+                    "Position": [
+                        -42.5,
+                        17.5,
+                        24
+                    ],
+                    "Rotation": [
+                        0,
+                        140,
                         0
                     ]
                 }
             ],
-            "SpawnCD": 0
+            "SpawnCD": 25,
+            "exp": 30
         }
     ],
-    "Swords": {
-        "Cutlass": {
-            "Name": "Cutlass",
-            "Damage": 10,
-            "Range": 5,
-            "HaveAbility": false,
-            "Abilities": {},
-            "Materials": {
-                "Celestium": 8
+    "Swords": [
+        {
+            "Combat": {
+                "Name": "Combat",
+                "Damage": 5,
+                "Range": 2,
+                "HaveAbility": false,
+                "Abilities": {},
+                "Materials": {},
+                "Money": {},
+                "Upgrades": {},
+                "Category": "None",
+                "Percent": "100"
             },
-            "Money": {
-                "Copper": 80,
-                "Silver": 0,
-                "Gold": 0,
-                "Luner": 0
-            },
-            "Upgrades": {
-                "MaterialsAdd": 0.4,
-                "Stats": 6
-            },
-            "Category": "Common",
-            "Percent": "10"
+            "Cutlass": {
+                "Name": "Cutlass",
+                "Damage": 10,
+                "Range": 5,
+                "HaveAbility": false,
+                "Abilities": {},
+                "Materials": {
+                    "Celestium": 8
+                },
+                "Money": {
+                    "Copper": 80,
+                    "Silver": 0,
+                    "Gold": 0,
+                    "Luner": 0
+                },
+                "Upgrades": {
+                    "MaterialsAdd": 0.4,
+                    "Stats": 6
+                },
+                "Category": "Common",
+                "Percent": "10"
+            }
         }
-    },
+    ],
     "Sheilds": {
         "Kornis": {
             "Name": "Zaroth",

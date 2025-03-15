@@ -16,8 +16,9 @@ namespace MonsterMGR
             monsterList = new List<GameObject>();
         }
 
-        public GameObject CreateMonster(GameObject monsterPrefab, Vector3 position, Quaternion rotation)
+        public GameObject CreateMonster(GameObject monsterPrefab, string name, Vector3 position, Quaternion rotation)
         {
+            monsterPrefab.name = name;
             GameObject monster = Instantiate(monsterPrefab, position, rotation);
             monsterList.Add(monster);
             return monster;

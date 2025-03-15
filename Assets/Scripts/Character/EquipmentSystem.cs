@@ -12,12 +12,6 @@ public class EquipmentSystem : MonoBehaviour
 
     GameObject currentWeaponInHand;
     GameObject currentWeaponInSheath;
-    void Start()
-    {
-        currentWeaponInSheath = Instantiate(weapon, weaponSheath.transform);
-        currentWeaponInSheath.transform.localPosition = Vector3.zero;
-    }
-
     public void DrawWeapon()
     {
         currentWeaponInHand = Instantiate(weapon, weaponHolder.transform);

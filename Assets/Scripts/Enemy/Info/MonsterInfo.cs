@@ -11,11 +11,14 @@ using Bow = GameGT.Bow;
 using Gun = GameGT.Gun;
 using Armour = GameGT.Armour;
 using DamageHandler = Damage.DamageHandler;
+using PlayerInfo = PlayerInfoNS.PlayerInfo;
+using BetrayerSpawner = Spawn.BetrayerSpawner;
 
 namespace MonsterInfoNS
 {
     public class MonsterInfo : MonoBehaviour
     {
+        public PlayerInfo playerInfo;
         private Monster monsterData;
         private GameObject monsterObject;
         private string name;
@@ -39,11 +42,16 @@ namespace MonsterInfoNS
         private float health; // Changed from object to float
         private float speed;
         private float currentHealth;
+        public Vector3 position;
+        public Quaternion rotation;
+        public bool isDead = false;
         public Animator anim;
         public Animator MonsterAnim;
 
         void Start()
         {
+            position = transform.position;
+            rotation = transform.rotation;
             MonsterAnim = GetComponent<Animator>();
             // gameObject.name = "Dunny";
             // Initialize after GameObject is ready
@@ -74,6 +82,11 @@ namespace MonsterInfoNS
             get { return name; }
         }
 
+        public bool IsDead
+        {
+            get { return isDead; }
+        }
+
         public void logAllProperties()
         {
             List<object> logList = new List<object> {
@@ -98,26 +111,33 @@ namespace MonsterInfoNS
             currentHealth -= damage;
             if (currentHealth <= 0)
             {
-                Die();
-                return;
+                StartCoroutine(Die());
             }
-            MonsterAnim.SetTrigger("EnemyHurt");
+            else
+            {
+                MonsterAnim.SetTrigger("EnemyHurt");
 
-            Debug.Log($"{name} received damage: {damage}, Current Health: {currentHealth}");
+                Debug.Log($"{name} received damage: {damage}, Current Health: {currentHealth}");
+            }
         }
 
-        private void Die()
+        private IEnumerator Die()
         {
+            isDead = true;
+            monsterData = MonsterLoader.FindMonsterByName(name.Replace("(Clone)", "").Trim());
             Debug.Log($"{name} has been defeated!");
             MonsterAnim.SetTrigger("EnemyDie");
-            // Destroy(gameObject);
+            playerInfo.DefeatMonster(monsterData.exp);
+            Debug.Log($"{name} has been defeated, earned {monsterData.exp}!");
+            yield return new WaitForSeconds(2f);
+            Destroy(gameObject);
         }
 
         public void ResetMonster()
         {
             monsterObject = gameObject;
             name = monsterObject.name;
-            monsterData = MonsterLoader.FindMonsterByName("Dunny");
+            monsterData = MonsterLoader.FindMonsterByName(name.Replace("(Clone)", "").Trim());
 
             // Ensure monsterData is found
             if (monsterData == null)
